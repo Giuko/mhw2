@@ -475,7 +475,8 @@ nav{
     margin-left: 10px;
     margin-right: 16px;
 
-    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     border-radius: 8px;
     background-color: #04090a;
