@@ -1,6 +1,7 @@
 let feedContent = Array.from(document.querySelectorAll('#feed article'));
 let headContent = Array.from(document.querySelectorAll('#head .item'));
-let sidebarList = document.querySelector('#popular-communities-list');
+const sidebarList = document.querySelector('#popular-communities-list');
+const sidebar = document.querySelector('#sidebar');
 
 let recentContent = Array.from(document.querySelectorAll('.subnav .recent'));
 
@@ -159,10 +160,10 @@ function checkScroll() {
     const bodyHeight = document.body.offsetHeight;
 
     if(scrollTop <  235){
-        sidebar.style.marginTop = 15;        
+        sidebar.style.marginTop = 15 + 'px';        
     }
     if(scrollTop >= 235){
-        sidebar.style.marginTop = scrollTop-220;
+        sidebar.style.marginTop = scrollTop-220 + 'px';
     }
 
     // Se l'utente ha raggiunto il fondo della pagina
