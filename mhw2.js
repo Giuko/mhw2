@@ -159,11 +159,17 @@ function checkScroll() {
     const windowHeight = window.innerHeight;
     const bodyHeight = document.body.offsetHeight;
 
-    if(scrollTop <  235){
-        sidebar.style.marginTop = 15 + 'px';        
-    }
-    if(scrollTop >= 235){
-        sidebar.style.marginTop = scrollTop-220 + 'px';
+    if(sidebar.dataset.position === "1" ){
+        sidebar.dataset.position === "0";
+        if(scrollTop <  235){
+            sidebar.style.marginTop = 15 + 'px';
+            sidebar.classList.remove('sticky');
+        }
+    }else{
+        sidebar.dataset.position === "1";
+        if(scrollTop >= 235){
+            sidebar.classList.add('sticky');
+        }
     }
 
     // Se l'utente ha raggiunto il fondo della pagina
